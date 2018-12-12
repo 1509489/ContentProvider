@@ -47,8 +47,12 @@ class MyContentProvider: ContentProvider(){
         return MyContentProviderContract.BASE_CONTENT_URI
     }
 
-    override fun query(uri: Uri,
-                       projection: Array<String>?, selection: String?, selectionArgs: Array<String>?, sortOrder: String?
+    override fun query(
+        uri: Uri,
+        projection: Array<String>?,
+        selection: String?,
+        selectionArgs: Array<String>?,
+        sortOrder: String?
     ): Cursor?  = contactDatabase.contactDao().getCursorContacts()
 
 
